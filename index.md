@@ -11,7 +11,7 @@
 </head>
 <br />
 <center style="font-size:45px;color:green;line-height:-10px"> A Five-Year Retrospective of Cellular Reliability Evolution:</center>
-<center style="font-size:32px;color:green;line-height:-10px"> The Encouraging, The Disappointing, and Further Enhancements</center>
+<center style="font-size:32px;color:green;line-height:110px;white-space:nowrap;"> The Encouraging, The Disappointing, and Further Enhancements</center>
 
 ![license](https://img.shields.io/badge/Platform-Android-green "Android")
 ![license](https://img.shields.io/badge/Version-Beta-yellow "Version")
