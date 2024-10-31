@@ -64,7 +64,7 @@ Upon cellular failures, we then notify our dedicated event logging service [Cell
 
 For event recovery, we provide similar tracing to record recovery events. In particular, for Data_Stall events we probe the network to more accurately monitor event recovery in [DataStallDiagnostics](https://github.com/CellReliabilityEvo/CellReliabilityEvo.github.io/tree/main/monitor/DataStallDiagnostics.java).
 
-Regarding the codes for tracing the data connection establishment for Data_Setup_Error failures, we are still dicussing with the authority to what extend can it be released
+Regarding the codes for tracing the data connection establishment for Data_Setup_Error failures, we are still dicussing with the authority to what extend can it be released.
 
 ### Stability-Compatible RAT Transition
 Upon RAT transitions, our control policy would kick in to check whether current system and network states are suitable for transitions. It currently runs as a daemon thread along side the telephony service, as shown in [RATTransition](https://github.com/CellReliabilityEvo/CellReliabilityEvo.github.io/tree/main/RATTransition.java).
