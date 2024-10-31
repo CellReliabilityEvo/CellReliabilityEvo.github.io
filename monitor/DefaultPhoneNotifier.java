@@ -38,7 +38,7 @@ import android.telephony.ims.ImsReasonInfo;
 import com.android.internal.telephony.PhoneInternalInterface.DataActivityState;
 import com.android.telephony.Rlog;
 
-// Cellular Reliability Add
+// Cellular Reliability Evolution Add
 import com.android.phone.statistics.CellularStateProcessor;
 // End
 
@@ -77,7 +77,7 @@ public class DefaultPhoneNotifier implements PhoneNotifier {
     public void notifyServiceState(Phone sender) {
         notifyServiceStateForSubId(sender, sender.getServiceState(), sender.getSubId());
 
-        // Cellular Reliability: used for monitoring Out_of_Service events
+        // Cellular Reliability Evolution: used for monitoring Out_of_Service events
         CellularStateProcessor.notifyServiceState(phoneId, sender.getServiceState());
         // End
     }

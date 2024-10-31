@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2020 The Cellular Reliability Project
+ * Copyright (C) 2024 The Cellular Reliability Evolution Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -23,7 +23,6 @@ import android.telephony.CellLocation;
 import android.telephony.SignalStrength;
 import android.telephony.ServiceState;
 import android.telephony.data.ApnSetting;
-import com.android.internal.telephony.dataconnection.ApnContext;
 
 public class CellularStateProcessor {
     
@@ -41,12 +40,10 @@ public class CellularStateProcessor {
         }
     }
 
-    public static void notifyDataSetupEvent(ApnContext apnContext, String cause, int phoneId){
+    public static void notifyDataSetupEvent(ApnSetting apn, int cause, int phoneId){
     	HashMap<String, String> params = new HashMap<String, String>();
-        ApnSetting apn = apnContext.getApnSetting();
         params.put('APN_NAME', apn != null ? apn.getApnName(): "unknown");
-        params.put('APN_TYPE', apnContext.getApnType());
-        params.put('REASON_CODE', apnContext.getReason());
+        params.put('APN_TYPE', apn.getApnTypeBitmask());
         params.put('ERROR_CODE', cause);
         notifySetupError(phoneId, params);
     }

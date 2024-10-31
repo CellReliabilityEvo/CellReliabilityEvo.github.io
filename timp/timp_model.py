@@ -10,7 +10,7 @@ Based on this, we calculate the most suitable triggers that may result in the gl
 Note that to run this model, you may need Data_Stall duration data (which we will not disclose yet), as well as
 devices' recovery stages
 
-:copyright: (c) 2020 by Cellular Reliability Team.
+:copyright: (c) 2024 by Cellular Reliability Evolution Team.
 :license: Apache 2.0, see LICENSE for more details.
 """
 import numpy as np

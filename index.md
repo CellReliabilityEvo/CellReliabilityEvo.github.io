@@ -34,7 +34,7 @@
 [For Developers](#for-developers)
 
 ## Introduction
-This repository contains our continous monitoring infrasturcture (based on Android-MOD, a customized Android system that records system-level traces upon the occurrence of suspicious cellular failure events) for capturing cellular failures in the wild, as well as our efforts for improving cellular reliability on Android devices. Our latest Android-MOD system is built upon vanilla Andorid 14. Therefore, you'll be able to run codes in this repo by patching these modifications to proper framework components.
+This repository contains our continous monitoring infrasturcture (based on Android-MOD, a customized Android system that records system-level traces upon the occurrence of suspicious cellular failure events) for capturing cellular failures in the wild, as well as our efforts for improving cellular reliability on Android devices. Our latest Android-MOD system is built upon vanilla Andorid 13/14. Therefore, you'll be able to run codes in this repo by patching these modifications to proper framework components.
 
 ### [The entire codebase and sample data are available in our [Github repo](https://github.com/CellReliabilityEvo/CellReliabilityEvo.github.io).]
 
@@ -45,7 +45,7 @@ Specifically, we modify the `DcTracker.java` and `DefaultPhoneNotifier.java` to 
 | Class | Failure Point | Purpose| Location in AOSP |
 | ---- | ---- | ---- | ---- |
 |   `DcTracker`   |   `onDataStallAlarm`   |   Tracking  Data_Stall events  | `TELEPHONY_SRC/dataconnection/DcTracker.java` |
-|   `DcTracker`   |   `onDataSetupComplete`   |   Tracking  Data_Setup_Error events  | `TELEPHONY_SRC/dataconnection/DcTracker.java` |
+|   `DataNetwork.DisconnectedState`   |   `enter`   |   Tracking  Data_Setup_Error events  | `TELEPHONY_SRC/data/DataNetwork.java` |
 |   `DefaultPhoneNotifier`   |   `notifyServiceState`   |   Tracking  Out_of_Service events  | `TELEPHONY_SRC/DefaultPhoneNotifier.java` |
 
 Upon cellular failures, we then notify our dedicated event logging service [CellularStateProcessor](https://github.com/CellReliabilityEvo/CellReliabilityEvo.github.io/tree/main/monitor/CellularStateProcessor.java) and [CellularReliability](https://github.com/CellReliabilityEvo/CellReliabilityEvo.github.io/tree/main/monitor/CellularReliability.java) to log critical cellular and device information:
