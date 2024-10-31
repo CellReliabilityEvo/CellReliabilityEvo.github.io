@@ -77,9 +77,7 @@ We currently provide our time-inhomogeneous Markov process (TIMP) that formalize
 We implement the TIMP model in Python ([timp_model](https://github.com/CellReliabilityEvo/CellReliabilityEvo.github.io/blob/main/timp/timp_model.py)) which can automatically search in the time trigger space so as to find triggers that can minimize the expected recovery time.
 
 ### Meticulous Date_Setup_Error Judgement
-The following is our report to the official development team of Android in Google and their response.
-
-![Report and Response](https://github.com/CellReliabilityEvo/CellReliabilityEvo.github.io/tree/main/dse_judgement/report.png)
+We also present our report to the official development team of Android in Google and the response [here](https://github.com/CellReliabilityEvo/CellReliabilityEvo.github.io/tree/main/dse_judgement/report.pdf).
 
 ## Platform Requirements
 ### Android
