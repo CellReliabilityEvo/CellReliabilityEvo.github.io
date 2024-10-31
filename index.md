@@ -10,8 +10,8 @@
     </script>
 </head>
 <br />
-<center style="font-size:45px;color:green;line-height:-10px"> A Four-Year Retrospective of Mobile Access Bandwidth Evolution:</center>
-<center style="font-size:32px;color:green;line-height:110px"> The Inspiring, The Frustrating, and The Fluctuating</center>
+<center style="font-size:45px;color:green;line-height:-10px"> A Five-Year Retrospective of Cellular Reliability Evolution:</center>
+<center style="font-size:32px;color:green;line-height:110px"> The Encouraging, The Disappointing, and Further Enhancements</center>
 
 ![license](https://img.shields.io/badge/Platform-Android-green "Android")
 ![license](https://img.shields.io/badge/Version-Beta-yellow "Version")
