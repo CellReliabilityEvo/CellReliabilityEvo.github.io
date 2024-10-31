@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2020 The Cellular Reliability Project
+ * Copyright (C) 2024 The Cellular Reliability Evolution Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -96,7 +96,6 @@ public class CellularReliability {
 
         data.put('APN_NAME', param.get('APN_NAME'));
         data.put('APN_TYPE', param.get('APN_TYPE'));
-        data.put('REASON_CODE', param.get('REASON_CODE'));
         data.put('ERROR_CODE', param.get('ERROR_CODE'));
 
         // record SetupError information
