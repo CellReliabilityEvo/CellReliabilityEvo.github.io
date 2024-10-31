@@ -78,7 +78,7 @@ We implement the TIMP model in Python ([timp_model](https://github.com/CellRelia
 ### Android
 For Android-related modifications, currently our code is run and tested in Android 13 and Android 14 (AOSP).
 Note that despite quite a number of changes have been made in Android 14 since Android 13, our code is applicable to both given that concerned tracing points remain unchanged.
-We have alsoe released our modifications compatible with Android 9-12 [here](https://github.com/CellularReliability/CellularReliability.github.io/tree/main/monitor).
+We have also released our modifications compatible with Android 9-12 [here](https://github.com/CellularReliability/CellularReliability.github.io/tree/main/monitor).
 
 ### Others
 For other code component such as our TIMP model, they can be run on Linux with proper Python supports.
