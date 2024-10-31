@@ -48,7 +48,7 @@ Specifically, we modify the `DataStallRecoveryManager.java`, `DataNetwork.java` 
 |   `DataNetwork.DisconnectedState`   |   `enter`   |   Tracking  Data_Setup_Error events  | `TELEPHONY_SRC/data/DataNetwork.java` |
 |   `DefaultPhoneNotifier`   |   `notifyServiceState`   |   Tracking  Out_of_Service events  | `TELEPHONY_SRC/DefaultPhoneNotifier.java` |
 
-Upon cellular failures, we then notify our dedicated event logging service [CellularStateProcessor](https://github.com/CellReliabilityEvo/CellReliabilityEvo.github.io/tree/main/monitor/CellularStateProcessor.java) and [CellularReliability](https://github.com/CellReliabilityEvo/CellReliabilityEvo.github.io/tree/main/monitor/CellularReliability.java) to log critical cellular and device information:
+Upon cellular failures, we then notify our dedicated event logging service [CellularStateProcessor](https://github.com/CellReliabilityEvo/CellReliabilityEvo.github.io/tree/blob/monitor/CellularStateProcessor.java) and [CellularReliability](https://github.com/CellReliabilityEvo/CellReliabilityEvo.github.io/blob/main/monitor/CellularReliability.java) to log critical cellular and device information:
 
 | Information | Description |
 | ---- | ---- |
@@ -62,17 +62,17 @@ Upon cellular failures, we then notify our dedicated event logging service [Cell
 | `CAUSE` | Error code of Data_Setup_Error defined in `DataFailCause` |
 | `APN`   | Current access point names |
 
-For event recovery, we provide similar tracing to record recovery events. In particular, for Data_Stall events we probe the network to more accurately monitor event recovery in [DataStallDiagnostics](https://github.com/CellReliabilityEvo/CellReliabilityEvo.github.io/tree/main/monitor/DataStallDiagnostics.java).
+For event recovery, we provide similar tracing to record recovery events. In particular, for Data_Stall events we probe the network to more accurately monitor event recovery in [DataStallDiagnostics](https://github.com/CellReliabilityEvo/CellReliabilityEvo.github.io/blob/main/monitor/DataStallDiagnostics.java).
 
 Regarding the codes for tracing the data connection establishment for Data_Setup_Error failures, we are still dicussing with the authority to what extend can it be released.
 
 ### Stability-Compatible RAT Transition
-Upon RAT transitions, our control policy would kick in to check whether current system and network states are suitable for transitions. It currently runs as a daemon thread along side the telephony service, as shown in [RATTransition](https://github.com/CellReliabilityEvo/CellReliabilityEvo.github.io/tree/main/RATTransition.java).
+Upon RAT transitions, our control policy would kick in to check whether current system and network states are suitable for transitions. It currently runs as a daemon thread along side the telephony service, as shown in [RATTransition](https://github.com/CellReliabilityEvo/CellReliabilityEvo.github.io/blob/main/rat_trans/RATTransition.java).
 
 ### TIMP-based Flexible Data_Stall Recovery
 We currently provide our time-inhomogeneous Markov process (TIMP) that formalizes the Data_Stall recovery process and find proper triggers for entering each recovery stage. 
 
-We implement the TIMP model in Python ([timp_model](https://github.com/CellReliabilityEvo/CellReliabilityEvo.github.io/tree/main/timp/timp_model.py)) which can automatically search in the time trigger space so as to find triggers that can minimize the expected recovery time.
+We implement the TIMP model in Python ([timp_model](https://github.com/CellReliabilityEvo/CellReliabilityEvo.github.io/blob/main/timp/timp_model.py)) which can automatically search in the time trigger space so as to find triggers that can minimize the expected recovery time.
 
 ## Platform Requirements
 ### Android
