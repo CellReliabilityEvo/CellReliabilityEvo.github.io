@@ -27,6 +27,8 @@
 
  - [TIMP-based Flexible Data_Stall Recovery](#timp-based-flexible-data_stall-recovery)
 
+ - [Meticulous Date_Setup_Error Judgement](#timp-based-flexible-data_stall-recovery)
+
 [Platform Requirements](#platform-requirements)
 
 [Data Release](#data-release)
@@ -73,6 +75,11 @@ Upon RAT transitions, our control policy would kick in to check whether current 
 We currently provide our time-inhomogeneous Markov process (TIMP) that formalizes the Data_Stall recovery process and find proper triggers for entering each recovery stage. 
 
 We implement the TIMP model in Python ([timp_model](https://github.com/CellReliabilityEvo/CellReliabilityEvo.github.io/blob/main/timp/timp_model.py)) which can automatically search in the time trigger space so as to find triggers that can minimize the expected recovery time.
+
+### Meticulous Date_Setup_Error Judgement
+The following is our report to the official development team of Android in Google and their response.
+
+![Report and Response](https://github.com/CellReliabilityEvo/CellReliabilityEvo.github.io/tree/main/dse_judgement/report.png)
 
 ## Platform Requirements
 ### Android
